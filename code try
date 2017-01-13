@@ -3,6 +3,7 @@ Type "copyright", "credits" or "license()" for more information.
 >>> import pygame
 >>> from pygame.locals import *
 >>> 
+>>> pygame.init()
 (6, 0)
 >>> 
 >>> 
