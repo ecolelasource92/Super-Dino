@@ -23,4 +23,9 @@ while continuer:
     pygame.display.update()
     pygame.display.flip()
     
+    jouer = pygame.image.load("playgame.png").convert_alpha()
+    fenetre.blit(jouer, (0,300))
+
+    pygame.display.update()
+    pygame.display.flip()
 
