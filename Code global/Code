@@ -21,3 +21,8 @@ fenetre.blit(fond,(0,0))
 
 #Raffraichir image
 pygame.display.flip()
+
+#Commandes #Bouger le personnage
+#if event.type == KEYDOWN:
+            #if event.key == K_DOWN:
+                #position_perso = position_perso.move(0,3)
