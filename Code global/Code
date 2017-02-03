@@ -11,10 +11,13 @@ fenetre = pygame.display.set_mode((LargeurInterface, LongueurInterface), RESIZAB
 
 continuer = 1
 while continuer:
-    continuer = int(input())
+    for event in pygame.event.get():
+        if event.type == QUIT:
+            pygame.quit()
+            continuer = int(input())
 
 fond = pygame.image.load("background.jpg").convert()
 fenetre.blit(fond,(0,0))
 
 #Raffraichir image
-display = pygame.display.flip()
+pygame.display.flip()
