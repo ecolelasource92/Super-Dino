@@ -1,0 +1,18 @@
+#mouvement :
+
+def perso(x, y, perso):
+    surface.blit(perso, (x,y))
+
+    
+for event in pygame.event.get():
+    if event.type == pygame.KEYDOWN:
+        if event.key == pygame.K_UP :
+            y_mouvement = -2
+        if event.type == pygame.KEYUP :
+            y_mouvement = 2
+
+y += y_mouvement
+perso(x,y,perso)
+
+if event.type == MOUSEBUTTONDOWN and event.button == 1 and event.pos[0] >= 41 and event.pos[0] <= 322 and event.pos[1] >= 73 and event.pos[1] >= 265 :
+           choix = niveau1  

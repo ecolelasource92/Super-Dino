@@ -1,0 +1,55 @@
+import pygame
+from pygame.locals import *
+
+pygame.init()
+
+#Initialisation Interface
+
+LargeurInterface = 640
+LongueurInterface = 480
+fenetre = pygame.display.set_mode((LargeurInterface, LongueurInterface), RESIZABLE)
+
+
+#Titre fenêtre
+
+pygame.display.set_caption("Super Dino")
+
+
+#BOUCLE PRINCIPALE
+
+continuer = 1
+
+#Afficher l'écran d'accueil
+
+#Raffraichir image
+pygame.display.update()
+raffraichir = pygame.display.flip()
+
+while continuer:
+    #On définie les boucles du jeu
+    continuer_accueil = 1
+    continuer_jeu = 1
+
+    #BOUCLE D'ACCUEIL
+    while continuer_accueil:
+	#Si l'utilisateur quitte, on met les variables 
+	#de boucle à 0 pour n'en parcourir aucune et fermer
+        for event in pygame.event.get():
+            if event.type == QUIT:
+                pygame.quit()
+                continuer = 0
+                continuer_accueil = 0
+                continuer_jeu = 0
+
+        jouer = pygame.image.load("demarrer.png")
+        fenetre.blit(jouer, (200,200))
+    
+        pygame.display.update()
+        pygame.display.flip()
+
+        if event.type == K_SPACE :
+            continuer_accueil = 0
+
+
+
+            
