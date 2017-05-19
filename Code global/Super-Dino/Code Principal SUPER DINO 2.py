@@ -1,6 +1,6 @@
 import pygame
 from pygame.locals import *
-from Moteur import*
+from Moteur_SUPERDINO2 import*
 
 
 
